@@ -1,0 +1,17 @@
+Skipping image OS validation for hb__log-report: docker inspect returned 1
+Collecting main service artifacts
+Failed to download artifact '/app/report.json' from service 'main' (best-effort)
+Traceback (most recent call last):
+  File "C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\trial\artifact_handler.py", line 330, in _download_artifact
+    await source_env.service_download_file(
+  File "C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\environments\docker\docker.py", line 721, in service_download_file
+    await self.download_file(source_path, target_path)
+  File "C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\environments\docker\docker.py", line 706, in download_file
+    await self._platform.download_file(source_path, target_path)
+  File "C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\environments\docker\docker_unix.py", line 56, in download_file
+    await self._env._run_docker_compose_command(
+  File "C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\environments\docker\docker.py", line 419, in _run_docker_compose_command
+    raise RuntimeError(
+RuntimeError: Docker compose command failed for environment log-report. Command: docker compose --project-name log-report__g2nzbgo --project-directory C:\log-report\environment -f C:\Users\admin\AppData\Local\Temp\tmpczjohd2l\log-report__g2NzBgo-docker-compose-resources.json -f C:\Users\admin\AppData\Roaming\Python\Python312\site-packages\harbor\environments\docker\docker-compose-build.yaml -f C:\Users\admin\AppData\Local\Temp\tmpz5k0y5hc\docker-compose-mounts.json cp main:/app/report.json jobs\2026-06-27__01-35-48\log-report__g2NzBgo\artifacts\app\report.json. Return code: 1. Stdout:  log-report__g2nzbgo-main-1 Copying log-report__g2nzbgo-main-1:/app/report.json to jobs\2026-06-27__01-35-48\log-report__g2NzBgo\artifacts\app\report.json
+Error response from daemon: Could not find the file /app/report.json in container a6fb7fd2938412371f7f9a3c1224363a9a9fc81a1587986b497f4f5853036abd
+. Stderr: None. 

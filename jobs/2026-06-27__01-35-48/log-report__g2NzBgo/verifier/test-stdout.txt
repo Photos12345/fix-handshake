@@ -1,0 +1,50 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.14, pytest-8.3.5, pluggy-1.6.0
+rootdir: /tests
+plugins: json-ctrf-0.1.0
+collected 3 items
+
+../tests/test_outputs.py EEE                                             [100%]
+
+==================================== ERRORS ====================================
+____________________ ERROR at setup of test_total_requests _____________________
+
+    @pytest.fixture(scope="session")
+    def report():
+        p = Path("/app/report.json")
+>       assert p.exists(), "/app/report.json not found"
+E       AssertionError: /app/report.json not found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:9: AssertionError
+______________________ ERROR at setup of test_unique_ips _______________________
+
+    @pytest.fixture(scope="session")
+    def report():
+        p = Path("/app/report.json")
+>       assert p.exists(), "/app/report.json not found"
+E       AssertionError: /app/report.json not found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:9: AssertionError
+_______________________ ERROR at setup of test_top_path ________________________
+
+    @pytest.fixture(scope="session")
+    def report():
+        p = Path("/app/report.json")
+>       assert p.exists(), "/app/report.json not found"
+E       AssertionError: /app/report.json not found
+E       assert False
+E        +  where False = exists()
+E        +    where exists = PosixPath('/app/report.json').exists
+
+/tests/test_outputs.py:9: AssertionError
+=========================== short test summary info ============================
+ERROR ../tests/test_outputs.py::test_total_requests - AssertionError: /app/re...
+ERROR ../tests/test_outputs.py::test_unique_ips - AssertionError: /app/report...
+ERROR ../tests/test_outputs.py::test_top_path - AssertionError: /app/report.j...
+============================== 3 errors in 0.07s ===============================

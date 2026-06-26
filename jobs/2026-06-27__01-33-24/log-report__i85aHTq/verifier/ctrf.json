@@ -1,0 +1,53 @@
+{
+    "results": {
+        "tool": {
+            "name": "pytest",
+            "version": "8.3.5"
+        },
+        "summary": {
+            "tests": 3,
+            "passed": 0,
+            "failed": 3,
+            "skipped": 0,
+            "pending": 0,
+            "other": 0,
+            "start": 1782504303.4374218,
+            "stop": 1782504303.7237186
+        },
+        "tests": [
+            {
+                "name": "test_total_requests",
+                "status": "failed",
+                "raw_status": "setup_failed",
+                "duration": 0.0015091899999788438,
+                "start": 1782504303.4933913,
+                "stop": 1782504303.696723,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"session\")\n    def report():\n        p = Path(\"/app/report.json\")\n>       assert p.exists(), \"/app/report.json not found\"\nE       AssertionError: /app/report.json not found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:9: AssertionError"
+            },
+            {
+                "name": "test_unique_ips",
+                "status": "failed",
+                "raw_status": "setup_failed",
+                "duration": 0.0007532450000553581,
+                "start": 1782504303.6984777,
+                "stop": 1782504303.7093472,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"session\")\n    def report():\n        p = Path(\"/app/report.json\")\n>       assert p.exists(), \"/app/report.json not found\"\nE       AssertionError: /app/report.json not found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:9: AssertionError"
+            },
+            {
+                "name": "test_top_path",
+                "status": "failed",
+                "raw_status": "setup_failed",
+                "duration": 0.0009363560000110738,
+                "start": 1782504303.7113461,
+                "stop": 1782504303.7230296,
+                "retries": 0,
+                "file_path": "test_outputs.py",
+                "trace": "@pytest.fixture(scope=\"session\")\n    def report():\n        p = Path(\"/app/report.json\")\n>       assert p.exists(), \"/app/report.json not found\"\nE       AssertionError: /app/report.json not found\nE       assert False\nE        +  where False = exists()\nE        +    where exists = PosixPath('/app/report.json').exists\n\n/tests/test_outputs.py:9: AssertionError"
+            }
+        ]
+    }
+}
